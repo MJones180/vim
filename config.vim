@@ -1,37 +1,34 @@
 " ========================
-" Vundle (Plugins)
+" Vim Plug (Plugins)
 " ========================
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-" Let Vundle manage itself
-Plugin 'VundleVim/Vundle.vim'
+" General Plugins
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'dense-analysis/ale'
+Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
+Plug 'RRethy/vim-illuminate'
+Plug 'airblade/vim-gitgutter'
+Plug 'Yggdroot/indentLine'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-" Plugins
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'dense-analysis/ale'
-Plugin 'tpope/vim-commentary'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'Vimjas/vim-python-pep8-indent'
-Plugin 'RRethy/vim-illuminate'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Yggdroot/indentLine'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
-Plugin 'preservim/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Language Specific Plugins
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'lervag/vimtex'
 
 " Color scheme
-Plugin 'joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim'
 
-call vundle#end()
-" Allow plugins to handle indentation
+" Initialize plugin system
+call plug#end()
 filetype plugin indent on
 
 " ========================
@@ -124,3 +121,9 @@ nmap <Leader>f :FZF<CR>
 nmap <Leader>b :Buffers<CR>
 " Open NERDTree
 noremap <C-n> :NERDTreeToggle<CR>
+" Vimtex config
+let g:tex_flavor='latex'
+let g:vimtex_view_method='skim'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
