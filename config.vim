@@ -21,8 +21,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Language Specific Plugins
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'lervag/vimtex'
+Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'lervag/vimtex', { 'for': 'latex' }
 
 " Color scheme
 Plug 'joshdick/onedark.vim'
