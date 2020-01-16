@@ -106,6 +106,8 @@ set hidden
 set splitbelow
 " Vertical split right
 set splitright
+" Replace with specified char or space if none given
+set conceallevel=1
 " Easier window switching
 map <C-J> <C-W>j
 map <C-K> <C-W>k
@@ -117,15 +119,13 @@ nmap <Leader>f :FZF<CR>
 nmap <Leader>b :Buffers<CR>
 " Open NERDTree
 noremap <C-n> :NERDTreeToggle<CR>
-" Replace with specified char or space if none given
-set conceallevel=1
 " Default tex to latex
 let g:tex_flavor='latex'
 " Default open latex pdf preview with skim
 let g:vimtex_view_method='skim'
 " Do not use indentLine's default color
-let g:indentLine_setColors = 0
+let g:indentLine_setColors=0
 " Do not use indentLine's concealment
 let g:indentLine_setConceal=0
 " Disable indentLines for latex
-au BufReadPost,BufNewFile *.tex let g:indentLine_enabled = 0
+au BufReadPost,BufNewFile *.tex let g:indentLine_enabled=0
