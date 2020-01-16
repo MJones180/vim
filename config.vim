@@ -9,6 +9,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 Plug 'RRethy/vim-illuminate'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
@@ -19,6 +20,8 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Language Specific Plugins
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
@@ -70,8 +73,6 @@ highlight Comment cterm=italic
 highlight MatchParen cterm=underline
 " Underline all matching words
 highlight illuminatedWord cterm=underline
-" Line indentation symbol
-let g:indentLine_char='|'
 
 " ========================
 " Vim Settings
@@ -110,20 +111,21 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
-" Easier window resizing
-nmap <Leader>w <C-W>+
-nmap <Leader>s <C-W>-
-nmap <Leader>d <C-W>>
-nmap <Leader>a <C-W><
 " Fuzzy search
 nmap <Leader>f :FZF<CR>
 " View open buffers
 nmap <Leader>b :Buffers<CR>
 " Open NERDTree
 noremap <C-n> :NERDTreeToggle<CR>
-" Vimtex config
-let g:tex_flavor='latex'
-let g:vimtex_view_method='skim'
-let g:vimtex_quickfix_mode=0
+" Replace with specified char or space if none given
 set conceallevel=1
-let g:tex_conceal='abdmg'
+" Default tex to latex
+let g:tex_flavor='latex'
+" Default open latex pdf preview with skim
+let g:vimtex_view_method='skim'
+" Do not use indentLine's default color
+let g:indentLine_setColors = 0
+" Do not use indentLine's concealment
+let g:indentLine_setConceal=0
+" Disable indentLines for latex
+au BufReadPost,BufNewFile *.tex let g:indentLine_enabled = 0
