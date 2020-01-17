@@ -20,12 +20,11 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 " Language Specific Plugins
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'lervag/vimtex', { 'for': 'latex' }
+Plug 'SirVer/ultisnips', { 'for': 'tex' }
 
 " Color scheme
 Plug 'joshdick/onedark.vim'
@@ -127,5 +126,7 @@ let g:vimtex_view_method='skim'
 let g:indentLine_setColors=0
 " Do not use indentLine's concealment
 let g:indentLine_setConceal=0
+" Where UltiSnips should find the snippets
+let g:UltiSnipsSnippetDirectories=['~/vim/snippets']
 " Disable indentLines for latex
 au BufReadPost,BufNewFile *.tex let g:indentLine_enabled=0
