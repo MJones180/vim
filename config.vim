@@ -122,6 +122,8 @@ noremap <C-n> :NERDTreeToggle<CR>
 let g:tex_flavor='latex'
 " Default open latex pdf preview with skim
 let g:vimtex_view_method='skim'
+" Do not conceal subscript/superscript
+let g:tex_conceal='abdmg'
 " Do not use indentLine's default color
 let g:indentLine_setColors=0
 " Do not use indentLine's concealment

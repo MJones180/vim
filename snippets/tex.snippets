@@ -64,10 +64,10 @@ ${1:${VISUAL}}
 \] $0
 endsnippet
 
-snippet ali "Align" bA
+snippet ali "Align" b
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 
@@ -162,6 +162,25 @@ snippet << "<<" iA
 endsnippet
 
 context "math()"
+snippet tt "text" iA
+\text{$1}$0
+endsnippet
+
+context "math()"
+snippet cc "subset" i
+\subset 
+endsnippet
+
+context "math()"
+snippet ccq "subseteq" Ai
+\subseteq 
+endsnippet
+
+snippet notin "not in " iA
+\not\in 
+endsnippet
+
+context "math()"
 snippet inn "in " iA
 \in 
 endsnippet
@@ -175,7 +194,7 @@ snippet UU "cup" iA
 endsnippet
 
 snippet OO "emptyset" iA
-\O
+\text{\O}
 endsnippet
 
 context "math()"
@@ -198,13 +217,13 @@ snippet RR "R" iA
 endsnippet
 
 snippet sec "Section" i
-\section{$0}
+\section*{$0}
 endsnippet
 
 snippet sub "Subsection" i
-\subsection{$0}
+\subsection*{$0}
 endsnippet
 
 snippet subb "Subsubsection" i
-\subsubsection{$0}
+\subsubsection*{$0}
 endsnippet
