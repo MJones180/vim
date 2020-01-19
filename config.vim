@@ -118,17 +118,19 @@ nmap <Leader>f :FZF<CR>
 nmap <Leader>b :Buffers<CR>
 " Open NERDTree
 noremap <C-n> :NERDTreeToggle<CR>
-" Default tex to latex
-let g:tex_flavor='latex'
 " Default open latex pdf preview with skim
 let g:vimtex_view_method='skim'
+" Default tex to latex
+let g:tex_flavor='latex'
 " Do not conceal subscript/superscript
 let g:tex_conceal='abdmg'
+" Do not show latex warnings
+let g:vimtex_quickfix_latexlog={'default' : 0}
 " Do not use indentLine's default color
 let g:indentLine_setColors=0
 " Do not use indentLine's concealment
 let g:indentLine_setConceal=0
-" Where UltiSnips should find the snippets
-let g:UltiSnipsSnippetDirectories=['~/vim/snippets']
 " Disable indentLines for latex
 au BufReadPost,BufNewFile *.tex let g:indentLine_enabled=0
+" Where UltiSnips should find the snippets
+let g:UltiSnipsSnippetDirectories=['~/vim/snippets']
