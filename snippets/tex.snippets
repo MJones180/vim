@@ -61,7 +61,7 @@ endsnippet
 snippet dm "Math" wA
 \[
 ${1:${VISUAL}}
-\] $0
+\]$0
 endsnippet
 
 snippet ali "Align" b
@@ -69,7 +69,6 @@ snippet ali "Align" b
 	${1:${VISUAL}}
 \end{align*}
 endsnippet
-
 
 context "math()"
 snippet // "Fraction" iA
@@ -225,4 +224,9 @@ endsnippet
 
 snippet bold "Bold" i
 \textbf{$0}
+endsnippet
+
+context "math()"
+snippet -n "Neg" iA
+\neg 
 endsnippet
