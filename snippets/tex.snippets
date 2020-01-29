@@ -18,6 +18,7 @@ snippet template "Basic template" b
 
 \usepackage{amsfonts}
 \usepackage{amsmath}
+\usepackage{nccmath}
 
 \begin{document}
 	$0
@@ -90,7 +91,7 @@ endsnippet
 
 context "math()"
 snippet sq "\sqrt{}" iA
-\sqrt{${1:${VISUAL}}} $0
+\sqrt{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"
@@ -229,4 +230,9 @@ endsnippet
 context "math()"
 snippet -n "Neg" iA
 \neg 
+endsnippet
+
+context "math()"
+snippet \bigO "BigO" iA
+\mathcal{O}
 endsnippet
