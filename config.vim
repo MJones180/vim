@@ -114,6 +114,8 @@ map <C-H> <C-W>h
 map <C-L> <C-W>l
 " Fuzzy search
 nmap <Leader>f :FZF<CR>
+" Ag search
+nmap <Leader>s :Ag<CR>
 " View open buffers
 nmap <Leader>b :Buffers<CR>
 " Open NERDTree
