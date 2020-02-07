@@ -105,8 +105,6 @@ set hidden
 set splitbelow
 " Vertical split right
 set splitright
-" Replace with specified char or space if none given
-set conceallevel=1
 " Easier window switching
 map <C-J> <C-W>j
 map <C-K> <C-W>k
@@ -134,5 +132,7 @@ let g:indentLine_setColors=0
 let g:indentLine_setConceal=0
 " Disable indentLines for latex
 au BufReadPost,BufNewFile *.tex let g:indentLine_enabled=0
+" Replace with specified char or space if none given for latex
+au BufReadPost,BufNewFile *.tex set conceallevel=1
 " Where UltiSnips should find the snippets
 let g:UltiSnipsSnippetDirectories=['~/vim/snippets']
