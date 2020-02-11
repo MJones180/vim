@@ -180,7 +180,7 @@ snippet inn "in " iA
 \in 
 endsnippet
 
-snippet NN "cap" iA
+snippet CC "cap" iA
 \cap 
 endsnippet
 
@@ -211,6 +211,10 @@ snippet RR "R" iA
 \mathbb{R}
 endsnippet
 
+snippet NN "N" iA
+\mathbb{N}
+endsnippet
+
 snippet sec "Section" i
 \section*{$0}
 endsnippet
@@ -227,6 +231,10 @@ snippet bold "Bold" i
 \textbf{$0}
 endsnippet
 
+snippet ital "Italics" i
+\textit{$0}
+endsnippet
+
 context "math()"
 snippet -n "Neg" iA
 \neg 
@@ -235,4 +243,14 @@ endsnippet
 context "math()"
 snippet \bigO "BigO" iA
 \mathcal{O}
+endsnippet
+
+context "math()"
+snippet ub "Underbrace" iA
+\underbrace{$0}
+endsnippet
+
+context "math()"
+snippet dot "CDot" i
+\cdot
 endsnippet
