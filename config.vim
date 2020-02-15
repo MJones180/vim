@@ -2,7 +2,6 @@
 " Vim Plug (Plugins)
 " ========================
 call plug#begin()
-
 " General Plugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -105,6 +104,17 @@ set hidden
 set splitbelow
 " Vertical split right
 set splitright
+" Default to everything unfolded
+set foldlevel=99
+" Fold based on syntax
+set foldmethod=syntax
+" Allow folding for Python
+au BufReadPost,BufNewFile *.py set foldmethod=indent
+
+" ========================
+" Mappings
+" ========================
+
 " Easier window switching
 map <C-J> <C-W>j
 map <C-K> <C-W>k
@@ -116,8 +126,15 @@ nmap <Leader>f :FZF<CR>
 nmap <Leader>s :Ag<CR>
 " View open buffers
 nmap <Leader>b :Buffers<CR>
+" Clear last search's highlights
+nmap <Leader>c :noh<CR>
 " Open NERDTree
 noremap <C-n> :NERDTreeToggle<CR>
+
+" ========================
+" LaTeX Config
+" ========================
+
 " Default open latex pdf preview with skim
 let g:vimtex_view_method='skim'
 " Default tex to latex
