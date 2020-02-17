@@ -43,6 +43,7 @@ let g:ale_linters={
     \ }
 " Packages to prettify code
 let b:ale_fixers={
+    \ 'java': ['google_java_format'],
     \ 'javascript': ['eslint'],
     \ 'python': ['yapf']
     \ }
