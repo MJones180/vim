@@ -42,7 +42,7 @@ let g:ale_linters={
     \ 'python': ['flake8'],
     \ }
 " Packages to prettify code
-let b:ale_fixers={
+let g:ale_fixers={
     \ 'java': ['google_java_format'],
     \ 'javascript': ['eslint'],
     \ 'python': ['yapf']
