@@ -129,8 +129,19 @@ nmap <Leader>s :Ag<CR>
 nmap <Leader>b :Buffers<CR>
 " Clear last search's highlights
 nmap <Leader>c :noh<CR>
+
+" ========================
+" NERDTree
+" ========================
+
 " Open NERDTree
 noremap <C-n> :NERDTreeToggle<CR>
+" Close out of NERDTree when opening a file
+let NERDTreeQuitOnOpen = 1
+" Delete buffer when deleting file from NERDTree
+let NERDTreeAutoDeleteBuffer = 1
+" Get rid of help message in NERDTree
+let NERDTreeMinimalUI = 1
 
 " ========================
 " LaTeX Config
