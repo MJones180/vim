@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-commentary'
+Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'RRethy/vim-illuminate'
@@ -43,6 +44,7 @@ let g:ale_linters={
     \ }
 " Packages to prettify code
 let g:ale_fixers={
+    \ 'css': ['stylelint'],
     \ 'java': ['google_java_format'],
     \ 'javascript': ['eslint'],
     \ 'python': ['yapf']
