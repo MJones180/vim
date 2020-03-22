@@ -146,6 +146,13 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 
 " ========================
+" Random
+" ========================
+
+" Disable polyglot for latex
+let g:polyglot_disabled = ['latex']
+
+" ========================
 " LaTeX Config
 " ========================
 
