@@ -24,7 +24,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Language Specific Plugins
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'lervag/vimtex', { 'for': 'latex' }
-Plug 'SirVer/ultisnips', { 'for': 'tex' }
+Plug 'SirVer/ultisnips', { 'for': ['tex', 'javascript'] }
 
 " Color scheme
 Plug 'joshdick/onedark.vim'
@@ -151,6 +151,8 @@ let NERDTreeMinimalUI = 1
 
 " Disable polyglot for latex
 let g:polyglot_disabled = ['latex']
+" Where UltiSnips should find the snippets
+let g:UltiSnipsSnippetDirectories=['~/vim/snippets']
 
 " ========================
 " LaTeX Config
@@ -172,5 +174,3 @@ let g:indentLine_setConceal=0
 au BufReadPost,BufNewFile *.tex let g:indentLine_enabled=0
 " Replace with specified char or space if none given for latex
 au BufReadPost,BufNewFile *.tex set conceallevel=1
-" Where UltiSnips should find the snippets
-let g:UltiSnipsSnippetDirectories=['~/vim/snippets']
