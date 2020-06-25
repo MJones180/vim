@@ -12,7 +12,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'RRethy/vim-illuminate'
 Plug 'airblade/vim-gitgutter'
-Plug 'Yggdroot/indentLine'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -166,11 +165,5 @@ let g:tex_flavor='latex'
 let g:tex_conceal='abdmg'
 " Do not show latex warnings
 let g:vimtex_quickfix_latexlog={'default' : 0}
-" Do not use indentLine's default color
-let g:indentLine_setColors=0
-" Do not use indentLine's concealment
-let g:indentLine_setConceal=0
-" Disable indentLines for latex
-au BufReadPost,BufNewFile *.tex let g:indentLine_enabled=0
 " Replace with specified char or space if none given for latex
 au BufReadPost,BufNewFile *.tex set conceallevel=1
