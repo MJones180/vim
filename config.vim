@@ -1,3 +1,9 @@
+" =========================================
+" Disable Polyglot For Certain Languages,
+" Needs To Be Defined Before Loading Plugin
+" =========================================
+let g:polyglot_disabled = ['latex']
+
 " ========================
 " Vim Plug (Plugins)
 " ========================
@@ -144,13 +150,10 @@ let NERDTreeAutoDeleteBuffer = 1
 " Get rid of help message in NERDTree
 let NERDTreeMinimalUI = 1
 
-" ========================
-" Random
-" ========================
+" ===========================
+" UltiSnips Snippets Location
+" ===========================
 
-" Disable polyglot for latex
-let g:polyglot_disabled = ['latex']
-" Where UltiSnips should find the snippets
 let g:UltiSnipsSnippetDirectories=['~/vim/snippets']
 
 " ========================
@@ -164,6 +167,6 @@ let g:tex_flavor='latex'
 " Do not conceal subscript/superscript
 let g:tex_conceal='abdmg'
 " Do not show latex warnings
-let g:vimtex_quickfix_latexlog={'default' : 0}
+let g:vimtex_quickfix_ignore_filters={'default' : 0}
 " Replace with specified char or space if none given for latex
 au BufReadPost,BufNewFile *.tex set conceallevel=1
