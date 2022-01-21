@@ -116,6 +116,8 @@ set splitright
 set foldlevel=99
 " Fold based on syntax
 set foldmethod=syntax
+" Highlight the current character's column
+set cursorcolumn
 " Allow folding for Python
 au BufReadPost,BufNewFile *.py set foldmethod=indent
 
