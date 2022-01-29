@@ -130,6 +130,8 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
+" Spell checking
+map <C-S> :setlocal spell<CR>
 " Fuzzy search
 nmap <Leader>f :FZF<CR>
 " Ag search
