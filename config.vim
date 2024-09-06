@@ -49,6 +49,7 @@ let g:ale_linters={
     \ }
 " Packages to prettify code
 let g:ale_fixers={
+    \ 'c': ['clang-format'],
     \ 'css': ['stylelint'],
     \ 'java': ['google_java_format'],
     \ 'javascript': ['eslint'],
