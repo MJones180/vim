@@ -50,11 +50,15 @@ let g:ale_linters={
 " Packages to prettify code
 let g:ale_fixers={
     \ 'c': ['clang-format'],
+    \ 'cpp': ['clang-format'],
     \ 'css': ['stylelint'],
     \ 'java': ['google_java_format'],
     \ 'javascript': ['eslint'],
     \ 'python': ['yapf']
     \ }
+" When I do `cpp --version` I get back 15.0.0
+" Ale needs to have the C++ version match otherwise linting will not work
+let g:ale_cpp_cc_options = '-std=c++15 -Wall'
 " Prettify code on save
 let g:ale_fix_on_save=1
 " Give Ale priority over git changes
